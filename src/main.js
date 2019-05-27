@@ -8,9 +8,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import Vue from 'vue';
 import App from './App';
 
-
 Vue.config.productionTip = false;
-
 Vue.use(BootstrapVue);
 
 export const eventBus = new Vue({

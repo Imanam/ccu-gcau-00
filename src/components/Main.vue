@@ -4,9 +4,11 @@
       <div class="def-flex">
         <img src="../assets/logo.png">
         <h3>{{header}}</h3>
+        <tds-reader/>
       </div>
     </b-jumbotron>
     <b-container fluid>
+
       <b-row>
         <b-col sm="3">
           <default-input ccuConfigId="projectName" title="name"></default-input>
@@ -48,6 +50,7 @@
 </template>
 
 <script>
+import tdsReader from "./TdsReader";
 import defaultInput from "./DefInput";
 import alarms from "./Alarms";
 import systemView from "./System";
@@ -59,12 +62,14 @@ export default {
     "default-input": defaultInput,
     "system-view": systemView,
     alarms,
+    "tds-reader": tdsReader,
   },
   data() {
     return {
       header: "CCU to GCAU Configuration Translator",
       subTitle: "from tdsa to agc...",
       ccuConfig,
+      tdsReader,
     };
   },
   methods: {},
